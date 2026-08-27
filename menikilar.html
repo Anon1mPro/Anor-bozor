@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mening mahsulotlarim — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-talab="kirgan">
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <div class="page-head">
+        <p class="eyebrow reveal">Mening dokonim</p>
+        <h1 class="reveal" style="--d:70ms">Mahsulotlarim</h1>
+        <p class="reveal muted" style="--d:140ms">
+          Bu yerda faqat siz qoʻygan mahsulotlar koʻrinadi. Yangi mahsulot qoʻshishingiz, tahrirlashingiz yoki oʻchirishingiz mumkin.
+        </p>
+      </div>
+
+      <!-- Forma -->
+      <div class="panel reveal" style="--d:180ms">
+        <h2 id="forma-sarlavha" style="font-size:1.2rem">Yangi mahsulot qoʻshish</h2>
+        <form id="mahsulot-forma">
+          <div class="form-row">
+            <div class="field">
+              <label for="f-nom">Mahsulot nomi</label>
+              <input class="input" id="f-nom" required maxlength="90">
+            </div>
+            <div class="field">
+              <label for="f-kategoriya">Kategoriya</label>
+              <select class="select" id="f-kategoriya"></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-narx">Narx (soʻm)</label>
+              <input class="input" id="f-narx" type="number" min="0" step="1000" required>
+            </div>
+            <div class="field">
+              <label for="f-zaxira">Omborda (dona)</label>
+              <input class="input" id="f-zaxira" type="number" min="0" value="1">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-rasm">Rasm havolasi</label>
+            <input class="input" id="f-rasm" type="url" placeholder="https://…">
+          </div>
+          <div class="field">
+            <label for="f-tavsif">Tavsif</label>
+            <textarea class="textarea" id="f-tavsif" maxlength="900"></textarea>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="saqlash-tugma" type="submit">Mahsulotni qoʻshish</button>
+            <button class="btn btn-ghost" id="bekor" type="button" style="display:none">Bekor qilish</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <h2 style="font-size:1.2rem">Roʻyxat</h2>
+          <span class="mono muted" id="soni"></span>
+        </div>
+        <div class="table-wrap reveal" style="--d:80ms">
+          <table class="data">
+            <thead>
+              <tr>
+                <th>Rasm</th><th>Nomi</th><th>Kategoriya</th>
+                <th>Narx</th><th>Qoʻyilgan</th><th>Amallar</th>
+              </tr>
+            </thead>
+            <tbody id="jadval-tana"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<script type="module" src="js/menikilar.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anor Bozor — onlayn bozor</title>
+<meta name="description" content="Anor Bozor — mahalliy sotuvchilar va xaridorlar uchun onlayn bozor. Mahsulotlar bozorga qoʻyilgan vaqti boʻyicha lentada.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- Sahifa ochilish panjurasi -->
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <section class="hero">
+        <p class="eyebrow reveal">Qarshi · onlayn bozor</p>
+        <h1 class="reveal" style="--d:80ms">
+          Bozor endi <span class="accent">lentada</span> ochiladi
+        </h1>
+        <p class="hero-lead reveal" style="--d:160ms">
+          Har bir mahsulot bozorga qoʻyilgan vaqti bilan birga koʻrinadi — kim nimani qachon
+          chiqarganini bir qarashda bilasiz. Yoqqanini saqlab qoʻying, savolingizni izohda yozing.
+        </p>
+        <div class="hero-actions reveal" style="--d:240ms">
+          <a class="btn btn-primary" href="mahsulotlar.html">Mahsulotlarni koʻrish</a>
+          <a class="btn btn-ghost" href="admin.html">Admin panel</a>
+        </div>
+
+        <div class="stat-row reveal" style="--d:320ms">
+          <div>
+            <div class="stat-num" id="st-mahsulot">0</div>
+            <div class="stat-label">Mahsulot</div>
+          </div>
+          <div>
+            <div class="stat-num" id="st-kategoriya">0</div>
+            <div class="stat-label">Kategoriya</div>
+          </div>
+          <div>
+            <div class="stat-num" id="st-arzon">—</div>
+            <div class="stat-label">Eng arzoni</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Vaqt lentasi</p>
+            <h2>Bozorga soʻnggi chiqqanlar</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="mahsulotlar.html">Hammasi →</a>
+        </div>
+
+        <div class="timeline" id="lenta">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow reveal">Qanday ishlaydi</p>
+        <h2 class="reveal" style="--d:60ms">Uch qadam, tamom</h2>
+        <div class="grid-2" style="margin-top:20px">
+          <div class="panel reveal">
+            <h3>Tanlang</h3>
+            <p class="muted" style="margin:0">Lenta yoki katalogdan mahsulotni oching, tavsifi va
+              narxini koʻring, xaridorlar izohlarini oʻqing.</p>
+          </div>
+          <div class="panel reveal" style="--d:90ms">
+            <h3>Saqlab qoʻying</h3>
+            <p class="muted" style="margin:0">Yoqqanini ♡ bilan belgilang — "Saqlanganlar"
+              sahifasida hammasi bir joyda turadi.</p>
+          </div>
+          <div class="panel reveal" style="--d:180ms">
+            <h3>Bogʻlaning</h3>
+            <p class="muted" style="margin:0">Qoʻngʻiroq qiling yoki izoh yozing. Sotuvchi
+              javobini shu sahifada koʻrasiz.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<!-- Firebase modular SDK import.js ichida import qilinadi -->
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

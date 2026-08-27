@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin panel — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <!-- ===== Kirish ===== -->
+      <section id="kirish">
+        <div class="page-head">
+          <p class="eyebrow reveal">Faqat xodimlar uchun</p>
+          <h1 class="reveal" style="--d:70ms">Admin panel</h1>
+          <p class="reveal muted" style="--d:140ms">Mahsulotlarni qoʻshish, tahrirlash va
+            oʻchirish uchun parolni kiriting.</p>
+        </div>
+
+        <div class="panel reveal" style="--d:200ms;max-width:420px">
+          <form id="kirish-forma">
+            <div class="field">
+              <label for="parol">Parol</label>
+              <input class="input" id="parol" type="password" required autocomplete="current-password">
+            </div>
+            <p class="muted" id="kirish-xato" style="color:var(--anor);font-size:.86rem;min-height:1.2em"></p>
+            <button class="btn btn-primary" type="submit">Kirish</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== Panel ===== -->
+      <section id="panel" style="display:none">
+        <div class="section-head reveal" style="margin-bottom:28px">
+          <div>
+            <p class="eyebrow">Boshqaruv</p>
+            <h1 style="margin:0">Mahsulotlar boshqaruvi</h1>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="chiqish">Chiqish</button>
+        </div>
+
+        <div class="stat-row reveal" style="--d:60ms;margin-top:0;border-top:0;padding-top:0">
+          <div><div class="stat-num" id="a-soni">0</div><div class="stat-label">Jami mahsulot</div></div>
+          <div><div class="stat-num" id="a-qiymat">—</div><div class="stat-label">Ombor qiymati</div></div>
+          <div><div class="stat-num" id="a-oxirgi">—</div><div class="stat-label">Oxirgi qoʻshilgan</div></div>
+        </div>
+
+        <!-- Forma -->
+        <div class="panel reveal" style="--d:120ms;margin-top:34px">
+          <h2 id="forma-sarlavha" style="font-size:1.2rem">Yangi mahsulot qoʻshish</h2>
+          <form id="mahsulot-forma">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-nom">Mahsulot nomi</label>
+                <input class="input" id="f-nom" required maxlength="90" placeholder="Masalan: Choʻyan qozon 8 litr">
+              </div>
+              <div class="field">
+                <label for="f-kategoriya">Kategoriya</label>
+                <select class="select" id="f-kategoriya"></select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-narx">Narx (soʻm)</label>
+                <input class="input" id="f-narx" type="number" min="0" step="1000" required placeholder="480000">
+              </div>
+              <div class="field">
+                <label for="f-zaxira">Omborda (dona)</label>
+                <input class="input" id="f-zaxira" type="number" min="0" placeholder="10">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-rasm">Rasm havolasi</label>
+              <input class="input" id="f-rasm" type="url" placeholder="https://… (ixtiyoriy)">
+            </div>
+            <div class="field">
+              <label for="f-tavsif">Tavsif</label>
+              <textarea class="textarea" id="f-tavsif" maxlength="900"
+                        placeholder="Mahsulot haqida qisqacha: material, oʻlcham, kafolat…"></textarea>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <button class="btn btn-primary" id="saqlash-tugma" type="submit">Mahsulotni qoʻshish</button>
+              <button class="btn btn-ghost" id="bekor" type="button" style="display:none">Bekor qilish</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Jadval -->
+        <div class="section">
+          <div class="section-head reveal">
+            <h2 style="font-size:1.2rem">Mahsulotlar roʻyxati</h2>
+          </div>
+          <div class="table-wrap reveal" style="--d:80ms">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th>Rasm</th><th>Nomi</th><th>Sotuvchi</th><th>Kategoriya</th>
+                  <th>Narx</th><th>Qoʻyilgan vaqti</th><th>Amallar</th>
+                </tr>
+              </thead>
+              <tbody id="jadval-tana"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<!-- Firebase modular SDK import.js ichida import qilinadi -->
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahsulotlar — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <div class="page-head">
+        <p class="eyebrow reveal">Katalog</p>
+        <h1 class="reveal" style="--d:70ms">Mahsulotlar</h1>
+        <p class="reveal" style="--d:140ms">
+          Nomi yoki tavsifi boʻyicha qidiring, kategoriya tanlang, narx yoki qoʻyilgan
+          vaqti boʻyicha saralang.
+        </p>
+      </div>
+
+      <div class="toolbar reveal" style="--d:200ms">
+        <input class="input" id="qidiruv" type="search" placeholder="Mahsulot qidirish…" aria-label="Qidirish">
+        <select class="select" id="kategoriya" aria-label="Kategoriya">
+          <option value="">Barcha kategoriyalar</option>
+        </select>
+        <select class="select" id="saralash" aria-label="Saralash">
+          <option value="yangi">Avval yangilari</option>
+          <option value="eski">Avval eskilari</option>
+          <option value="arzon">Narx: arzondan</option>
+          <option value="qimmat">Narx: qimmatdan</option>
+        </select>
+        <span class="mono muted" id="natija-soni"></span>
+      </div>
+
+      <div class="grid" id="tor"></div>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<!-- Firebase modular SDK import.js ichida import qilinadi -->
+<script type="module" src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aloqa — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <div class="page-head">
+        <p class="eyebrow reveal">Bogʻlanish</p>
+        <h1 class="reveal" style="--d:70ms">Savolingiz bormi?</h1>
+        <p class="reveal" style="--d:140ms">
+          Ish vaqtida qoʻngʻiroq qiling yoki xabar qoldiring — bir ish kuni ichida javob beramiz.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel reveal">
+          <h3>Toʻgʻridan-toʻgʻri</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px" id="aloqa-royxat"></ul>
+        </div>
+
+        <div class="panel reveal" style="--d:100ms">
+          <h3>Xabar qoldirish</h3>
+          <form id="aloqa-forma">
+            <div class="field">
+              <label for="a-ism">Ismingiz</label>
+              <input class="input" id="a-ism" required maxlength="50">
+            </div>
+            <div class="field">
+              <label for="a-tel">Telefon yoki email</label>
+              <input class="input" id="a-tel" required maxlength="60">
+            </div>
+            <div class="field">
+              <label for="a-matn">Xabaringiz</label>
+              <textarea class="textarea" id="a-matn" required maxlength="700"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Xabarni yuborish</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<!-- Firebase modular SDK import.js ichida import qilinadi -->
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>

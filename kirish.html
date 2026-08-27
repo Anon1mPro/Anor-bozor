@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kirish — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-talab="mehmon">
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+      <div class="auth-wrap">
+        <div class="page-head">
+          <p class="eyebrow reveal">Kirish</p>
+          <h1 class="reveal" style="--d:70ms">Xush kelibsiz</h1>
+          <p class="reveal muted" style="--d:140ms">
+            Email va parolingizni kiriting.
+          </p>
+        </div>
+
+        <div class="panel reveal" style="--d:200ms">
+          <form id="kirish-forma">
+            <div class="field">
+              <label for="email">Email</label>
+              <input class="input" id="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="parol">Parol</label>
+              <input class="input" id="parol" type="password" required autocomplete="current-password" minlength="6">
+            </div>
+            <p id="xato" style="color:var(--anor);font-size:.86rem;min-height:1.2em;margin:0 0 12px"></p>
+            <button class="btn btn-primary" type="submit" style="width:100%">Kirish</button>
+          </form>
+          <p class="auth-alt">
+            Hisobingiz yoʻqmi? <a href="royxat.html">Roʻyxatdan oʻtish</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<script type="module" src="js/kirish.js"></script>
+</body>
+</html>

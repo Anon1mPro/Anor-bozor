@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yozishmalar — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-talab="kirgan">
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <div class="page-head">
+        <p class="eyebrow reveal">Chat</p>
+        <h1 class="reveal" style="--d:70ms">Yozishmalar</h1>
+        <p class="reveal muted" style="--d:140ms">
+          Xaridorlar bilan yoki sotuvchilarga yozgan xabarlaringiz shu yerda. Real vaqtda yangilanadi.
+        </p>
+      </div>
+
+      <div class="chat-wrap reveal" style="--d:200ms">
+        <div class="chat-list" id="chat-royxat"></div>
+
+        <div class="chat-pane">
+          <div class="chat-head" id="chat-head" style="display:none">
+            <div>
+              <div class="name" id="chat-ism"></div>
+              <div class="sub" id="chat-mahsulot"></div>
+            </div>
+            <a class="btn btn-ghost btn-sm" id="chat-mahsulot-link" href="#">Mahsulot →</a>
+          </div>
+          <div class="chat-messages" id="chat-xabarlar">
+            <div class="chat-empty" id="chat-empty">
+              <div>
+                <div style="font-size:2rem;margin-bottom:8px">✎</div>
+                <p>Chapdagi ro'yxatdan yozishmani tanlang.</p>
+              </div>
+            </div>
+          </div>
+          <form class="chat-input" id="chat-forma" style="display:none">
+            <input class="input" id="chat-matn" placeholder="Xabar yozing…" autocomplete="off" maxlength="500" required>
+            <button class="btn btn-primary" type="submit">Yuborish</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<script type="module" src="js/xabarlar.js"></script>
+</body>
+</html>

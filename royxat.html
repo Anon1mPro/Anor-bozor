@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roʻyxatdan oʻtish — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-talab="mehmon">
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+      <div class="auth-wrap">
+        <div class="page-head">
+          <p class="eyebrow reveal">Roʻyxatdan oʻtish</p>
+          <h1 class="reveal" style="--d:70ms">Yangi hisob</h1>
+          <p class="reveal muted" style="--d:140ms">
+            Roʻyxatdan oʻtsangiz mahsulot qoʻyishingiz, sotib olishingiz va sotuvchilar bilan yozishishingiz mumkin.
+          </p>
+        </div>
+
+        <div class="panel reveal" style="--d:200ms">
+          <form id="royxat-forma">
+            <div class="field">
+              <label for="ism">Ism (yoki doʻkon nomi)</label>
+              <input class="input" id="ism" required maxlength="60" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input class="input" id="telefon" type="tel" required maxlength="30"
+                     placeholder="+998 90 123 45 67" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input class="input" id="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="parol">Parol (kamida 6 belgi)</label>
+              <input class="input" id="parol" type="password" required minlength="6" autocomplete="new-password">
+            </div>
+            <p id="xato" style="color:var(--anor);font-size:.86rem;min-height:1.2em;margin:0 0 12px"></p>
+            <button class="btn btn-primary" type="submit" style="width:100%">Roʻyxatdan oʻtish</button>
+          </form>
+          <p class="auth-alt">
+            Hisobingiz bormi? <a href="kirish.html">Kirish</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<script type="module" src="js/royxat.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saqlanganlar — Anor Bozor</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="shutter" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="shell">
+  <header id="yon-header"></header>
+
+  <div class="main">
+    <div class="page">
+
+      <div class="page-head">
+        <p class="eyebrow reveal">Sizning roʻyxatingiz</p>
+        <h1 class="reveal" style="--d:70ms">Saqlanganlar</h1>
+        <p class="reveal muted" style="--d:140ms" id="saqlangan-holat">Yuklanmoqda…</p>
+      </div>
+
+      <div class="grid" id="saqlangan-tor"></div>
+
+    </div>
+
+    <footer id="sayt-footer"></footer>
+  </div>
+</div>
+
+<!-- Firebase modular SDK import.js ichida import qilinadi -->
+<script type="module" src="js/saved.js"></script>
+</body>
+</html>
