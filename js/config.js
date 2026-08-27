@@ -24,7 +24,7 @@ export const SAYT = {
   telefon: "+998 90 123 45 67",
   telefon2: "+998 75 221 00 11",
   email: "salom@anorbozor.uz",
-  manzil: "Qarshi sh., Mustaqillik koʻchasi 12",
+  manzil: "Samarqand sh., Mustaqillik koʻchasi 12",
   ish_vaqti: "Dushanba–Shanba, 09:00–19:00",
   telegram: "https://t.me/anorbozor",
   instagram: "https://instagram.com/anorbozor"
